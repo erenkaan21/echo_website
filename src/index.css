@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* If Amaral Medium is available on Google Fonts, import here. If not, provide a local font-face below. */
+/* @import url('https://fonts.googleapis.com/css2?family=Amaral+Medium&display=swap'); */
+
+@font-face {
+  font-family: 'Amaral Medium';
+  src: url('/fonts/AmaralMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.am-amaral {
+  font-family: 'Amaral Medium', serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(120deg, #1a223f 0%, #3a1c5c 100%);
+  min-height: 100vh;
+  /* Add global styles here */
+}
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+body {
+  color: #e0e6f7;
+  overflow-x: hidden;
+}
