@@ -60,7 +60,7 @@ const DynamicEchoTitle = () => {
         return (
           <motion.span
             key={idx}
-            className="relative text-7xl md:text-8xl lg:text-9xl drop-shadow-2xl font-serif tracking-wide"
+            className="relative text-6xl md:text-7xl lg:text-8xl drop-shadow-[0_6px_32px_#a68cffcc] font-serif tracking-wide"
             animate={animate}
             transition={transition}
             onMouseEnter={() => setHovered(idx)}
@@ -129,11 +129,16 @@ const Home = () => (
       <div className="absolute inset-0 bg-gradient-to-b from-[#181b2e88] via-[#181b2e44] to-[#2a1c3bEE]" />
     </div>
     {/* HERO SECTION LAYOUT */}
-    <div className="flex flex-col md:flex-row items-center justify-center mt-20 w-full px-4 max-w-6xl mx-auto gap-10 md:gap-16">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col md:flex-row items-center justify-start mt-10 w-full px-2 max-w-5xl mx-auto gap-6 md:gap-10"
+    >
       {/* Left: Title, tagline, trailer */}
-      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:ml-24">
         <DynamicEchoTitle />
-        <p className="mt-2 md:mt-4 text-lg md:text-2xl text-ethereal italic font-light max-w-2xl">
+        <p className="mt-1 md:mt-2 text-base md:text-lg text-ethereal italic font-light max-w-xl">
           {movie.tagline}
         </p>
         {/* Trailer embed */}
@@ -141,9 +146,9 @@ const Home = () => (
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="mt-8 md:mt-12 w-full flex justify-center md:justify-start"
+          className="mt-4 md:mt-6 w-full flex justify-center md:justify-start"
         >
-          <div className="w-[90vw] md:w-[480px] lg:w-[560px] aspect-video rounded-xl shadow-dreamy overflow-hidden border-4 border-ethereal/30">
+          <div className="w-[70vw] md:w-[420px] lg:w-[540px] aspect-video rounded-xl shadow-dreamy overflow-hidden border-4 border-ethereal/30">
             <iframe
               src={movie.trailerUrl}
               title="Echo Trailer"
@@ -161,7 +166,7 @@ const Home = () => (
         transition={{ duration: 1 }}
         className="flex justify-center items-center flex-shrink-0"
       >
-        <div className="w-52 h-[312px] md:w-72 md:h-[432px] lg:w-96 lg:h-[576px] xl:w-[28rem] xl:h-[672px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
+        <div className="w-36 h-[220px] md:w-52 md:h-[300px] lg:w-64 lg:h-[384px] xl:w-[18rem] xl:h-[470px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
           <motion.img
             src={poster}
             alt="Film Poster"
@@ -172,8 +177,7 @@ const Home = () => (
           />
         </div>
       </motion.div>
-    </div>
-
+    </motion.div>
   </section>
 );
 

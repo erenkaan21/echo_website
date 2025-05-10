@@ -3,6 +3,7 @@ import { movie } from "../data/movie";
 import { motion } from "framer-motion";
 import directorPhoto from "../assets/director.webp";
 import still1 from "../assets/still1.webp";
+import poster from "../assets/poster.webp";
 
 import screenwriterPhoto from "../assets/screenwriter.webp";
 import leadactressPhoto from "../assets/leadactress.webp";
@@ -49,14 +50,14 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
         filter: "brightness(1.08)",
         zIndex: 20
       }}
-      className={`relative w-full h-[900px] md:w-[200px] md:h-[900px] flex flex-col items-center cursor-pointer overflow-hidden rounded-xl shadow-xl bg-gradient-to-br from-[#181b2e] to-[#2a1c3b] group z-10 transition-all duration-300`}
+      className={`relative w-full h-[600px] md:w-[140px] md:h-[600px] flex flex-col items-center cursor-pointer overflow-hidden rounded-xl shadow-xl bg-gradient-to-br from-[#181b2e] to-[#2a1c3b] group z-10 transition-all duration-300`}
       onClick={onClick}
     >
       {/* Location and Name at the top */}
       <div className="absolute top-0 left-0 w-full flex flex-col items-center z-20 pointer-events-none mt-2">
         {location && <span className="text-xs md:text-sm font-semibold text-dreamy drop-shadow bg-[#181b2e99] px-2 py-1 rounded-t-xl mb-1">{location}</span>}
-        <span className="text-lg md:text-xl font-bold text-white drop-shadow bg-[#181b2e99] px-3 py-1 rounded-xl mb-1">{name}</span>
-        <span className="uppercase tracking-wider text-[11px] md:text-xs text-white bg-[#181b2e99] px-2 py-0.5 rounded mb-1">{role}</span>
+        <span className="text-base md:text-lg font-bold text-white drop-shadow bg-[#181b2e99] px-2 py-0.5 rounded-xl mb-1">{name}</span>
+        <span className="uppercase tracking-wider text-[10px] md:text-[11px] text-white bg-[#181b2e99] px-1.5 py-0.5 rounded mb-1">{role}</span>
       </div>
       <motion.img
         src={photo}
@@ -82,7 +83,7 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
           transition={{ type: "spring", stiffness: 220, damping: 28 }}
         >
           <div className="w-full flex flex-col items-center justify-center">
-            <p className="text-white text-base md:text-lg mb-3 text-center whitespace-pre-line min-h-[40px]">{restBio}</p>
+            <p className="text-white text-sm md:text-base mb-2 text-center whitespace-pre-line min-h-[32px]">{restBio}</p>
             {Array.isArray(social) && social[0] && social[0].url && (
               <a
                 href={social[0].url}
@@ -104,20 +105,20 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
 const AccordionPanel = ({ bio, links, social, onClose }) => (
   <motion.div
     initial={{ width: 0, opacity: 0 }}
-    animate={{ width: '340px', opacity: 1 }}
+    animate={{ width: '220px', opacity: 1 }}
     exit={{ width: 0, opacity: 0 }}
     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-    className="h-full flex flex-col justify-center px-6 py-8 bg-gradient-to-br from-[#181b2e]/95 to-[#2a1c3b]/95 rounded-xl z-30 shadow-2xl relative"
+    className="h-full flex flex-col justify-center px-3 py-4 bg-gradient-to-br from-[#181b2e]/95 to-[#2a1c3b]/95 rounded-xl z-30 shadow-2xl relative"
     style={{ minWidth: 0 }}
   >
     <button onClick={onClose} className="absolute top-2 right-2 text-xs px-2 py-1 bg-dreamy/30 text-ethereal rounded hover:bg-dreamy/60">Close</button>
-    <p className="text-accent text-xs mb-3 text-center whitespace-pre-line min-h-[40px]">{bio}</p>
-    <div className="flex flex-wrap gap-2 mb-2 justify-center">
+    <p className="text-accent text-xs mb-2 text-center whitespace-pre-line min-h-[28px]">{bio}</p>
+    <div className="flex flex-wrap gap-1 mb-1 justify-center">
       {links.map((l, idx) => (
-        <a key={idx} href={l.url} target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-ethereal/10 text-ethereal rounded hover:bg-ethereal/20 transition">{l.label}</a>
+        <a key={idx} href={l.url} target="_blank" rel="noopener noreferrer" className="text-xs px-1.5 py-0.5 bg-ethereal/10 text-ethereal rounded hover:bg-ethereal/20 transition">{l.label}</a>
       ))}
     </div>
-    <div className="flex gap-3 mt-4 justify-center">
+    <div className="flex gap-2 mt-2 justify-center">
       {social.map((s, idx) => (
         <a
           key={idx}
@@ -125,9 +126,9 @@ const AccordionPanel = ({ bio, links, social, onClose }) => (
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center p-0 rounded-lg transition-all duration-200"
-          style={{ width: 56, height: 56, background: 'transparent', border: 'none', boxShadow: 'none' }}
+          style={{ width: 36, height: 36, background: 'transparent', border: 'none', boxShadow: 'none' }}
         >
-          <img src={instagramLogo} alt="Instagram" width={56} height={56} className="block opacity-70 hover:opacity-100 transition-opacity" />
+          <img src={instagramLogo} alt="Instagram" width={36} height={36} className="block opacity-70 hover:opacity-100 transition-opacity" />
         </a>
       ))}
     </div>
@@ -176,7 +177,7 @@ const CastCrew = () => {
         name: "Michael Gabriel",
         role: "Lead Actor",
         photo: michaelPhoto,
-        bio: `Michael Gabriel, is an actor starring in Abduction Chronicles on Amazon Prime, The April 16th Collateral Interest cartel series which will be released on Prime.`,
+        bio: `Miami, FL, USA\nMichael Gabriel, is an actor starring in Abduction Chronicles on Amazon Prime, The April 16th Collateral Interest cartel series which will be released on Prime.`,
         links: [],
         social: []
       },
@@ -194,7 +195,7 @@ const CastCrew = () => {
         name: "Ryan Buck Thomas",
         role: "Supporting Actor",
         photo: story1Photo,
-        bio: `Ryan Buck Thomas is a native Amerian actor that has played the role of a shaman in the Echo pilot Episode. He has starred in the movie \"The Adobe\" available in Amazon Prime..`,
+        bio: `St. Augustine, Florida, USA\nRyan Buck Thomas is a native Amerian actor that has played the role of a shaman in the Echo pilot Episode. He has starred in the movie \"The Adobe\" available in Amazon Prime..`,
         links: [],
         social: [
           { icon: "fab fa-instagram", url: "https://www.instagram.com/ryan_buck_thomas" }
@@ -205,8 +206,19 @@ const CastCrew = () => {
   const [expanded, setExpanded] = useState([null, null]); // per row
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 mt-16 bg-gradient-to-br from-[#181b2e] to-[#2a1c3b]">
-      <motion.div
+    <>
+      {/* Blurred poster background - static, outside animation */}
+      <div className="fixed inset-0 w-full h-full -z-10">
+        <img
+          src={poster}
+          alt="Film Poster Background"
+          className="object-cover w-full h-full"
+          style={{ filter: "blur(8px) brightness(0.45) saturate(1.1)", opacity: 0.92 }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#181b2e88] via-[#181b2e44] to-[#2a1c3bEE]" />
+      </div>
+      <section className="min-h-screen flex flex-col items-center justify-center px-4 py-14 mt-12">
+        <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -217,12 +229,12 @@ const CastCrew = () => {
           initial={{ opacity: 0, scale: 0.88, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-4xl md:text-6xl font-extrabold uppercase tracking-widest text-white text-center mb-4 drop-shadow-[0_4px_32px_#a68cff99] bg-gradient-to-r from-ethereal via-dreamy to-ethereal bg-clip-text text-transparent"
+          className="text-2xl md:text-4xl font-extrabold uppercase tracking-widest text-white text-center mb-2 drop-shadow-[0_2px_16px_#a68cff99] bg-gradient-to-r from-ethereal via-dreamy to-ethereal bg-clip-text text-transparent"
         >
           Cast & Crew
         </motion.h2>
         <div className="mx-auto mb-10 w-32 h-1 rounded-full bg-gradient-to-r from-dreamy/0 via-dreamy/80 to-dreamy/0 blur-[1.5px] opacity-80" />
-        <div className="flex flex-col gap-12 mt-12 w-full">
+        <div className="flex flex-col gap-6 mt-8 w-full">
           {rows.map((row, rowIdx) => (
             <div key={rowIdx} className="grid grid-cols-1 md:grid-cols-3 gap-0 mb-8 w-full px-2 md:px-6" style={{height:'min-content'}}>
               {row.map((person, idx) => {
@@ -245,6 +257,7 @@ const CastCrew = () => {
         </div>
       </motion.div>
     </section>
+    </>
   );
 };
 
