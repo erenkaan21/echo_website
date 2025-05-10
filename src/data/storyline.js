@@ -1,11 +1,11 @@
 // Storyline slide data for the Echo film
-import story1 from "../assets/story1.jpg";
-import story2 from "../assets/story2.jpg";
-import story3 from "../assets/story3.png";
-import story4 from "../assets/story4.png";
-import story5 from "../assets/story5.png";
-import story6 from "../assets/story6.jpeg";
-import story7 from "../assets/story7.jpg";
+import story1 from "../assets/story1.webp";
+import story2 from "../assets/story2.webp";
+import story3 from "../assets/story3.webp";
+import story4 from "../assets/story4.webp";
+import story5 from "../assets/story5.webp";
+import story6 from "../assets/story6.webp";
+import story7 from "../assets/story7.webp";
 
 export const storylineSlides = [
   {

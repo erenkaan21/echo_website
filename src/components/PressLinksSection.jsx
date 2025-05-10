@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import artmodernmiami from "../assets/artmodernmiami.png";
-import bestfilmawards from "../assets/bestfilmawards.png";
-import cannasfilmawards from "../assets/cannasfilmawards.png";
-import europeanshortawards from "../assets/europeanshortawards.png";
-import NYIFA from "../assets/NYIFA.jpg";
-import prisma from "../assets/prisma.png";
+import artmodernmiami from "../assets/artmodernmiami.webp";
+import bestfilmawards from "../assets/bestfilmawards.webp";
+import cannasfilmawards from "../assets/cannasfilmawards.webp";
+import europeanshortawards from "../assets/europeanshortawards.webp";
+import NYIFA from "../assets/NYIFA.webp";
+import prisma from "../assets/prisma.webp";
 
 // List of logos and their corresponding URLs (order matches movie.press)
 const pressLogos = [

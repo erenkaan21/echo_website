@@ -1,18 +1,18 @@
 import React from "react";
 import { movie } from "../data/movie";
 import { motion } from "framer-motion";
-import poster from "../assets/poster.jpeg";
+import poster from "../assets/poster.webp";
 import ConfettiBackground from "../components/ConfettiBackground.jsx";
 import PressLinksSection from "../components/PressLinksSection.jsx";
-import award1 from "../assets/award1.png";
-import award2 from "../assets/award2.png";
-import award3 from "../assets/award3.png";
-import award4 from "../assets/award4.png";
-import award5 from "../assets/award5.png";
-import award6 from "../assets/award6.png";
-import award7 from "../assets/award7.png";
-import award8 from "../assets/award8.png";
-import award9 from "../assets/award9.png";
+import award1 from "../assets/award1.webp";
+import award2 from "../assets/award2.webp";
+import award3 from "../assets/award3.webp";
+import award4 from "../assets/award4.webp";
+import award5 from "../assets/award5.webp";
+import award6 from "../assets/award6.webp";
+import award7 from "../assets/award7.webp";
+import award8 from "../assets/award8.webp";
+import award9 from "../assets/award9.webp";
 
 const awardImages = [award1, award2, award3, award4, award5, award6, award7, award8, award9];
 

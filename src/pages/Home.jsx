@@ -1,8 +1,8 @@
 import React from "react";
 import { movie } from "../data/movie";
 import { motion } from "framer-motion";
-import poster from "../assets/poster.jpeg";
-import pearl from "../assets/pearl.png";
+import poster from "../assets/poster.webp";
+import pearl from "../assets/pearl.webp";
 
 
 const scrollToSection = (id) => {

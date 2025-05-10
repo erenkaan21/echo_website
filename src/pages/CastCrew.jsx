@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { movie } from "../data/movie";
 import { motion } from "framer-motion";
-import directorPhoto from "../assets/director.png";
-import producerPhoto from "../assets/still1.jpg";
-import screenwriterPhoto from "../assets/screenwriter.png";
-import leadactressPhoto from "../assets/leadactress.png";
-import story1Photo from "../assets/story1.jpg";
-import instagramLogo from "../assets/insta1.png";
+import directorPhoto from "../assets/director.webp";
+import still1 from "../assets/still1.webp";
+
+import screenwriterPhoto from "../assets/screenwriter.webp";
+import leadactressPhoto from "../assets/leadactress.webp";
+import story1Photo from "../assets/story1.webp";
+import michaelPhoto from "../assets/michael.webp";
+import instagramLogo from "../assets/insta1.webp";
 
 const placeholder = "https://placehold.co/240x320/png?text=Photo";
 const placeholderBio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.";
@@ -159,24 +161,24 @@ const CastCrew = () => {
         ]
       },
       {
-        name: "Ryan Buck Thomas",
-        role: "Lead Actor",
-        photo: story1Photo,
-        bio: `Florida, FL, USA\nhe is a great actor.`,
-        links: [],
-        social: []
-      },
-    ],
-    [
-      {
         name: "Tuğba Yazıcı",
         role: "Producer",
-        photo: producerPhoto,
+        photo: still1,
         bio: `Florida, FL, USA\nTuğba Yazıcı was born in Istanbul. After studying at the Faculty of Fine Arts Painting Department, she received \"Fashion Design\" education at the Istanbul Fashion Academy between 2012-2014. Besides the paintings she produced and the exhibitions she organized, she created her brand in 2014. She adapted her paintings from canvas and adapted them to her designs and created a brand as \"Tugba Yazıcı\".\nThrough the \"Portable Art\" concept, the artist combines her paintings with fashion; today, it is carried around the world in colorful, bold, and different designs. Their designs are worn in many countries of the world. She also continues her painting studies and participates in international exhibitions such as Spectrum Miami Art Fair. The artist lives in Florida.`,
         links: [],
         social: [
           { icon: "fab fa-instagram", url: "https://www.instagram.com/tugbayaziciofficial/" }
         ]
+      },
+    ],
+    [
+      {
+        name: "Michael Gabriel",
+        role: "Lead Actor",
+        photo: michaelPhoto,
+        bio: `Michael Gabriel, is an actor starring in Abduction Chronicles on Amazon Prime, The April 16th Collateral Interest cartel series which will be released on Prime.`,
+        links: [],
+        social: []
       },
       {
         name: "Zeynep Hande Yazici",
@@ -184,9 +186,20 @@ const CastCrew = () => {
         photo: leadactressPhoto,
         bio: `Florida, FL, USA\nShe was born on September 20, 2001 in Istanbul. She studies psychology and is fluent in English and Turkish. She played in Istanbul Duru Theater in 2015-2016. Between 2016-2017 played in school theater at Amherst Regional High School, MA, USA. In 2018, she participated in the Berlin Art Festival (ISTA) workshop. In the 2021 she played the role of Farah in the Serbulent Apartment short film.`,
         links: [],
-        social: []
+        social: [
+          { icon: "fab fa-instagram", url: "https://www.instagram.com/p/CZMr16gD_l8/" }
+        ]
       },
-      { name: "Crew Name 4", role: "CINEMATOGRAPHER" },
+      {
+        name: "Ryan Buck Thomas",
+        role: "Supporting Actor",
+        photo: story1Photo,
+        bio: `Ryan Buck Thomas is a native Amerian actor that has played the role of a shaman in the Echo pilot Episode. He has starred in the movie \"The Adobe\" available in Amazon Prime..`,
+        links: [],
+        social: [
+          { icon: "fab fa-instagram", url: "https://www.instagram.com/ryan_buck_thomas" }
+        ]
+      }
     ],
   ];
   const [expanded, setExpanded] = useState([null, null]); // per row

@@ -1,5 +1,5 @@
 import React from "react";
-import pearl from "../assets/pearl.png";
+import pearl from "../assets/pearl.webp";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 

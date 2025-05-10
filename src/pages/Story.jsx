@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { storylineSlides } from "../data/storyline";
-import poster from "../assets/poster.jpeg";
+import poster from "../assets/poster.webp";
 
 const AUTO_ADVANCE_SEC = 8;
 
@@ -69,7 +69,7 @@ const Story = () => {
           className="absolute inset-0 w-full h-full"
         >
           <motion.img
-            src={storylineSlides[current].image}
+            src={storylineSlides[current].image.replace(/(jpg|jpeg|png)$/, 'webp')}
             alt={storylineSlides[current].title}
             className="w-full h-full object-cover object-center absolute inset-0"
             style={{ zIndex: 1, filter: 'brightness(0.7) saturate(1.08)' }}

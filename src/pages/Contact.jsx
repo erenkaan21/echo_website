@@ -1,7 +1,7 @@
 import React from "react";
 import { movie } from "../data/movie";
 import { motion } from "framer-motion";
-import poster from "../assets/poster.jpeg";
+import poster from "../assets/poster.webp";
 
 const Contact = () => {
   return (
