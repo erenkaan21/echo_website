@@ -42,22 +42,22 @@ const InterviewsSection = () => (
         Interviews & Press
       </span>
     </motion.h2>
-    <div className="flex gap-6 overflow-x-auto pb-2 px-1 scrollbar-hide">
+    <div className="grid grid-cols-1 gap-4 px-1 md:gap-6 scrollbar-hide">
       {interviews.map((iv, idx) => (
         <motion.div
           key={idx}
-          className="min-w-[320px] max-w-xs bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-ethereal/40 hover:border-dreamy/80 transition-all duration-300 flex flex-col items-center p-6 mb-2 group"
+          className="w-full bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-ethereal/40 hover:border-dreamy/80 transition-all duration-300 flex flex-col items-center p-4 md:p-6 mb-2 group"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: idx * 0.1 }}
         >
-          <img src={iv.img} alt={iv.name} className="w-20 h-20 rounded-full object-cover border-4 border-ethereal shadow-md mb-3"/>
-          <div className="text-lg font-bold text-white mb-1">{iv.name}</div>
+          <img src={iv.img} alt={iv.name} className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-4 border-ethereal shadow-md mb-3"/>
+          <div className="text-base md:text-lg font-bold text-white mb-1">{iv.name}</div>
           <div className="text-xs text-dreamy mb-2 uppercase tracking-wide">{iv.role}</div>
-          <div className="font-semibold text-base text-ethereal mb-2">{iv.title}</div>
+          <div className="font-semibold text-sm md:text-base text-ethereal mb-2">{iv.title}</div>
           <div className="text-xs text-white/80 mb-3 text-center">{iv.excerpt}</div>
-          <a href={iv.url} target="_blank" rel="noopener noreferrer" className="mt-auto px-4 py-1.5 rounded-lg bg-dreamy/80 text-white font-semibold shadow hover:bg-dreamy/100 transition">Read More</a>
+          <a href={iv.url} target="_blank" rel="noopener noreferrer" className="mt-auto px-3 py-1.5 rounded-lg bg-dreamy/80 text-white font-semibold shadow hover:bg-dreamy/100 transition">Read More</a>
         </motion.div>
       ))}
     </div>

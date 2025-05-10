@@ -80,7 +80,7 @@ const Story = () => {
           {/* Gradient overlay for readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
           {/* Animated text overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end md:justify-center items-center px-4 md:px-0 pb-12 md:pb-0 z-20 select-none pointer-events-none">
+          <div className="absolute inset-0 flex flex-col justify-end md:justify-center items-center px-4 md:px-0 pb-32 md:pb-0 z-20 select-none pointer-events-none">
             <AnimatePresence mode="wait">
               <motion.div
                 key={storylineSlides[current].title + '-textbox'}

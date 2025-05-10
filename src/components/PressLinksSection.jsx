@@ -28,7 +28,7 @@ const PressLinksSection = () => (
     >
       Interview & Press
     </motion.h2>
-    <div className="flex flex-row gap-8 justify-center items-center flex-nowrap overflow-visible w-full py-2">
+    <div className="grid grid-cols-2 gap-3 w-full py-2 md:flex md:flex-row md:gap-8 md:justify-center md:items-center md:flex-nowrap md:overflow-visible">
       {pressLogos.map((logo, i) => (
         <motion.a
           key={i}
@@ -41,11 +41,11 @@ const PressLinksSection = () => (
           transition={{ duration: 0.7, delay: i * 0.09 }}
           className="group"
         >
-          <div className="w-40 h-40 flex items-center justify-center bg-white/90 rounded-2xl shadow-xl border-2 border-ethereal/30 hover:border-dreamy/80 transition group-hover:scale-105 group-hover:shadow-2xl">
+          <div className="w-full aspect-square flex items-center justify-center bg-white/90 rounded-xl shadow border border-ethereal/20 hover:border-dreamy/60 transition group-hover:scale-105 md:group-hover:shadow-xl p-0 m-0 md:w-32 md:h-32 md:aspect-auto">
             <img
               src={logo.img}
               alt={logo.alt}
-              className="w-32 h-32 object-contain select-none pointer-events-none"
+              className="w-4/5 h-4/5 object-contain select-none pointer-events-none"
               draggable="false"
             />
           </div>

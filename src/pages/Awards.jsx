@@ -63,11 +63,11 @@ const Awards = () => (
           }}
         >
           {/* First row: 4 images */}
-          <div className="flex flex-row justify-center gap-6 w-full">
+          <div className="grid grid-cols-2 gap-3 w-full md:flex md:flex-row md:gap-6 md:justify-center">
             {awardImages.slice(0, 4).map((img, i) => (
               <motion.div
                 key={i}
-                className="relative flex items-center justify-center w-48 h-48 bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-ethereal/30 hover:border-dreamy/80 transition-all duration-300 group overflow-hidden flex-shrink-0"
+                className="relative flex items-center justify-center w-full aspect-square bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-ethereal/30 hover:border-dreamy/80 transition-all duration-300 group overflow-hidden flex-shrink-0 md:w-48 md:h-48 md:aspect-auto"
                 initial={{ opacity: 0, scale: 0.88, y: 40 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 whileHover={{ scale: 1.08, boxShadow: "0 0 32px 8px #a68cff55" }}
@@ -76,7 +76,7 @@ const Awards = () => (
                 <motion.img
                   src={img}
                   alt={`Award ${i+1}`}
-                  className="w-48 h-48 object-contain drop-shadow-xl select-none pointer-events-none"
+                  className="w-4/5 h-4/5 object-contain drop-shadow-xl select-none pointer-events-none"
                   initial={{ scale: 1 }}
                   whileHover={{ scale: 1.12 }}
                   transition={{ type: 'spring', stiffness: 220, damping: 18 }}
@@ -96,11 +96,11 @@ const Awards = () => (
             ))}
           </div>
           {/* Second row: 5 images */}
-          <div className="flex flex-row justify-center gap-6 w-full">
+          <div className="grid grid-cols-2 gap-3 w-full md:flex md:flex-row md:gap-6 md:justify-center md:mt-4 !mt-0">
             {awardImages.slice(4, 9).map((img, i) => (
               <motion.div
                 key={i+4}
-                className="relative flex items-center justify-center w-48 h-48 bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-ethereal/30 hover:border-dreamy/80 transition-all duration-300 group overflow-hidden flex-shrink-0"
+                className="relative flex items-center justify-center w-full aspect-square bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-ethereal/30 hover:border-dreamy/80 transition-all duration-300 group overflow-hidden flex-shrink-0 md:w-48 md:h-48 md:aspect-auto"
                 initial={{ opacity: 0, scale: 0.88, y: 40 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 whileHover={{ scale: 1.08, boxShadow: "0 0 32px 8px #a68cff55" }}
@@ -109,7 +109,7 @@ const Awards = () => (
                 <motion.img
                   src={img}
                   alt={`Award ${i+5}`}
-                  className="w-48 h-48 object-contain drop-shadow-xl select-none pointer-events-none"
+                  className="w-4/5 h-4/5 object-contain drop-shadow-xl select-none pointer-events-none"
                   initial={{ scale: 1 }}
                   whileHover={{ scale: 1.12 }}
                   transition={{ type: 'spring', stiffness: 220, damping: 18 }}
