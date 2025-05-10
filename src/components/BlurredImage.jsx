@@ -6,6 +6,7 @@ import React, { useState } from "react";
  * @param {string} alt - The alt text
  * @param {string} [className] - Optional additional classes
  * @param {string} [placeholder] - Optional low-res or blurred placeholder src
+ * @param {string} [fullSrc] - Optional full-res image src
  */
 const BlurredImage = ({ src, alt, className = "", placeholder }) => {
   const [loaded, setLoaded] = useState(false);

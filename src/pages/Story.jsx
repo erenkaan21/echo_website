@@ -75,7 +75,7 @@ const Story = () => {
             style={{ zIndex: 1, filter: 'brightness(0.7) saturate(1.08)' }}
             initial={{ scale: 1 }}
             animate={{ scale: 1.07 }}
-            transition={{ duration: 6, ease: 'easeInOut' }}
+            transition={{ duration: AUTO_ADVANCE_SEC, ease: 'easeInOut' }}
           />
           {/* Gradient overlay for readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10" />
@@ -88,11 +88,11 @@ const Story = () => {
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
                 transition={{ duration: 0.8, ease: "easeInOut" }}
-                className="rounded-xl px-2 md:px-4 py-2 md:py-4 flex flex-col items-center max-w-3xl md:max-w-2xl mx-auto"
+                className="rounded-xl px-1 md:px-2 py-1 md:py-2 flex flex-col items-center max-w-2xl mx-auto"
                 style={{ pointerEvents: 'auto', background: 'none' }}
               >
                 <motion.h2
-                  className="text-4xl md:text-6xl font-serif font-light md:font-normal mb-4 text-white drop-shadow-2xl text-center tracking-wide italic"
+                  className="text-3xl md:text-5xl font-serif font-light md:font-normal mb-2 text-white drop-shadow-2xl text-center tracking-wide italic max-w-md mx-auto whitespace-normal"
                   style={{ fontFamily: `'Playfair Display', Georgia, 'Times New Roman', serif` }}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -102,14 +102,16 @@ const Story = () => {
                   {storylineSlides[current].title}
                 </motion.h2>
                 <motion.p
-                  className="text-base md:text-xl font-serif text-white/90 drop-shadow max-w-3xl text-center tracking-wide"
+                  className="text-xs md:text-sm font-serif text-white/90 drop-shadow max-w-2xl text-center tracking-wide"
                   style={{ fontFamily: `'Georgia', 'Times New Roman', serif` }}
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.8, delay: 0.12, ease: "easeInOut" }}
                 >
-                  {storylineSlides[current].text}
+                  {current === 0
+  ? storylineSlides[0].text.replace(/^.*?[.!?]\s+/, '')
+  : storylineSlides[current].text}
                 </motion.p>
               </motion.div>
             </AnimatePresence>

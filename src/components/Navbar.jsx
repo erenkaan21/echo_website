@@ -17,18 +17,18 @@ const Navbar = () => (
     initial={{ y: -40, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 0.8 }}
-    className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-gradient-to-r from-[#a68cff70] to-[#e0e6f755] shadow-xl rounded-b-xl"
+    className="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur border-b border-gradient-to-r from-[#a68cff33] to-[#e0e6f733] shadow rounded-b-xl"
     style={{ boxShadow: '0 6px 32px 0 #a68cff22' }}
   >
-    <div className="max-w-full mx-auto px-4 md:px-8 py-2 flex items-center justify-center gap-2 md:gap-8 lg:gap-10">
+    <div className="max-w-full mx-auto px-2 md:px-4 py-1 flex items-center justify-center gap-3 md:gap-6 lg:gap-8">
       <DynamicEchoTitle size="navbar" />
-      <div className="flex gap-2 md:gap-5 lg:gap-8 rounded-xl bg-transparent px-2 md:px-4 py-1 max-w-7xl overflow-x-auto items-center scrollbar-hide whitespace-nowrap">
+      <div className="flex gap-3 md:gap-5 lg:gap-7 rounded-xl bg-transparent px-2 md:px-4 py-2 max-w-7xl overflow-x-auto items-center scrollbar-hide whitespace-nowrap">
         {navItems.map(item => (
           <NavLink
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `relative px-2 md:px-4 py-2 uppercase tracking-wider font-semibold text-lg md:text-xl lg:text-2xl transition-all duration-200
+              `relative px-2 md:px-3 py-1.5 uppercase tracking-wider font-semibold text-lg md:text-xl lg:text-2xl transition-all duration-200
               ${isActive ? "text-[#6ddcff]" : "hover:text-[#a68cff] text-ethereal"}`
             }
             end={item.path === "/"}
@@ -78,7 +78,7 @@ const DynamicEchoTitle = ({ size = "home" }) => {
   const letters = size === "navbar" ? ["e", "c", "h", "pearl"] : ["E", "C", "H", "O"];
   const [hovered, setHovered] = React.useState(null);
   const sizeClass = size === "navbar"
-    ? "text-xl md:text-2xl lg:text-3xl normal"
+    ? "text-2xl md:text-3xl lg:text-4xl normal"
     : "text-7xl md:text-8xl lg:text-9xl tracking-wide font-serif";
   return (
     <div className={`flex gap-1 select-none cursor-pointer relative drop-shadow-2xl ${sizeClass} ${size === 'navbar' ? 'am-amaral' : 'font-serif tracking-wide  uppercase'}`}
