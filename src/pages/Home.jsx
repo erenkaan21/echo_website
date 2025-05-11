@@ -133,7 +133,7 @@ const Home = () => (
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="flex flex-col md:flex-row items-center justify-start mt-10 w-full px-2 max-w-5xl mx-auto gap-6 md:gap-10"
+      className="flex flex-col-reverse md:flex-row items-center justify-start mt-10 w-full px-2 max-w-5xl mx-auto gap-6 md:gap-10"
     >
       {/* Left: Title, tagline, trailer */}
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:ml-24">
@@ -141,6 +141,19 @@ const Home = () => (
         <p className="mt-1 md:mt-2 text-base md:text-lg text-ethereal italic font-light max-w-xl">
           {movie.tagline}
         </p>
+        {/* Mobile: Poster below logline, above trailer */}
+        <div className="block md:hidden w-full flex justify-center my-4">
+          <div className="w-64 h-[370px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
+            <motion.img
+              src={poster}
+              alt="Film Poster"
+              className="w-full h-full object-fill"
+              style={{ boxShadow: '0 8px 48px 0 rgba(60,40,120,0.50), 0 2px 12px 0 rgba(0,0,0,0.33)' }}
+              whileHover={{ scale: 1.045, filter: 'brightness(1.08) drop-shadow(0 0 32px #a68cff99)' }}
+              transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+            />
+          </div>
+        </div>
         {/* Trailer embed */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -148,7 +161,7 @@ const Home = () => (
           transition={{ delay: 0.5, duration: 1 }}
           className="mt-4 md:mt-6 w-full flex justify-center md:justify-start"
         >
-          <div className="w-[70vw] md:w-[420px] lg:w-[540px] aspect-video rounded-xl shadow-dreamy overflow-hidden border-4 border-ethereal/30">
+          <div className="w-[70vw] md:w-[420px] lg:w-[540px] aspect-video rounded-xl overflow-hidden border-4 border-ethereal/30">
             <iframe
               src={movie.trailerUrl}
               title="Echo Trailer"
@@ -159,14 +172,14 @@ const Home = () => (
           </div>
         </motion.div>
       </div>
-      {/* Right: Poster */}
+      {/* Desktop: Poster right */}
       <motion.div
         initial={{ opacity: 0, x: 40, scale: 0.98 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 1 }}
-        className="flex justify-center items-center flex-shrink-0"
+        className="hidden md:flex justify-center items-center flex-shrink-0"
       >
-        <div className="w-36 h-[220px] md:w-52 md:h-[300px] lg:w-64 lg:h-[384px] xl:w-[18rem] xl:h-[470px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
+        <div className="w-64 h-[370px] lg:w-80 lg:h-[480px] xl:w-[23rem] xl:h-[600px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
           <motion.img
             src={poster}
             alt="Film Poster"

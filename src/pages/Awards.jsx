@@ -49,8 +49,7 @@ const Awards = () => (
       </div>
       <div className="mx-auto mb-4 w-20 h-0.5 rounded-full bg-gradient-to-r from-dreamy/0 via-dreamy/80 to-dreamy/0 blur-[1.5px] opacity-80" />
       {/* Awards Grid */}
-      <ConfettiBackground>
-        <motion.div
+      <motion.div
           className="flex flex-col gap-6 mb-8 py-4 max-w-3xl mx-auto items-center"
           initial="hidden"
           whileInView="visible"
@@ -129,7 +128,6 @@ const Awards = () => (
             ))}
           </div>
         </motion.div>
-      </ConfettiBackground>
       {/* Press & Interviews Section (below awards) */}
       <PressLinksSection />
     </motion.div>

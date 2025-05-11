@@ -46,9 +46,11 @@ import img21_thumb from "../assets/thumbs/fa2d578b-91db-4015-99a5-0ef133ec02c8.j
 import still2_thumb from "../assets/thumbs/still2.webp";
 import bts1_thumb from "../assets/thumbs/bts1.webp";
 import poster_thumb from "../assets/thumbs/poster.webp";
+import img29 from "../assets/img29.webp";
 
 const galleryImages = [
   { full: poster, thumb: poster_thumb },
+  { full: img29, thumb: img29 },
   { full: img1, thumb: img1_thumb },
   { full: img2, thumb: img2_thumb },
   { full: img3, thumb: img3_thumb },
