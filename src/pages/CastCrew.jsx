@@ -51,7 +51,7 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
         filter: "brightness(1.08)",
         zIndex: 20
       }}
-      className={`relative w-full h-[600px] md:w-[140px] md:h-[600px] flex flex-col items-center cursor-pointer overflow-hidden rounded-xl shadow-xl bg-gradient-to-br from-[#181b2e] to-[#2a1c3b] group z-10 transition-all duration-300`}
+      className={`relative w-[110px] h-[360px] md:w-[120px] md:h-[420px] flex flex-col items-center cursor-pointer overflow-hidden rounded-xl shadow-xl bg-gradient-to-br from-[#181b2e] to-[#2a1c3b] group z-10 transition-all duration-300`}
       onClick={onClick}
     >
       {/* Location and Name at the top */}
@@ -84,7 +84,7 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
           transition={{ type: "spring", stiffness: 220, damping: 28 }}
         >
           <div className="w-full flex flex-col items-center justify-center">
-            <p className="text-white text-sm md:text-base mb-2 text-center whitespace-pre-line min-h-[32px]">{restBio}</p>
+            <p className="text-white text-[9px] md:text-[11px] mb-2 text-center whitespace-pre-line min-h-[32px]">{restBio}</p>
             {Array.isArray(social) && social[0] && social[0].url && (
               <a
                 href={social[0].url}
@@ -218,7 +218,7 @@ const CastCrew = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#181b2e88] via-[#181b2e44] to-[#2a1c3bEE]" />
       </div>
-      <section className="min-h-screen flex flex-col items-center justify-center px-4 py-14 mt-12">
+      <section className="min-h-screen flex flex-col items-center justify-center px-8 md:px-32 py-14 mt-12">
         <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -235,14 +235,17 @@ const CastCrew = () => {
           Cast & Crew
         </motion.h2>
         <div className="mx-auto mb-10 w-32 h-1 rounded-full bg-gradient-to-r from-dreamy/0 via-dreamy/80 to-dreamy/0 blur-[1.5px] opacity-80" />
-        <div className="flex flex-col gap-6 mt-8 w-full">
+        <div className="flex flex-col gap-6 mt-8 w-full max-w-5xl mx-auto">
           {rows.map((row, rowIdx) => (
-            <div key={rowIdx} className="grid grid-cols-1 md:grid-cols-3 gap-0 mb-8 w-full px-2 md:px-6" style={{height:'min-content'}}>
+            <div key={rowIdx} className="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-6 gap-x-2 md:gap-x-6 mb-8 w-full px-2 md:px-6 justify-center" style={{height:'min-content'}}>
               {row.map((person, idx) => {
                 // Add left margin to first card, right margin to last card
                 let extraMargin = "";
+                // For the first card of the second row, reduce the top margin on mobile
+                let customClass = "flex-1 min-w-0 flex items-stretch";
+                
                 return (
-                  <div key={idx} className={`flex-1 min-w-0 flex items-stretch`}>
+                  <div key={idx} className={customClass}>
                     <Card
                       {...person}
                       expanded={expanded[rowIdx] === idx}

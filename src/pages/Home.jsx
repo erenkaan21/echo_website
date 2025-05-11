@@ -137,7 +137,9 @@ const Home = () => (
     >
       {/* Left: Title, tagline, trailer */}
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:ml-24">
-        <DynamicEchoTitle />
+        <div className="mt-10 md:mt-0 w-full flex justify-center md:justify-start">
+            <DynamicEchoTitle />
+          </div>
         <p className="mt-1 md:mt-2 text-base md:text-lg text-ethereal italic font-light max-w-xl">
           {movie.tagline}
         </p>
