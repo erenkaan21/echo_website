@@ -8,6 +8,7 @@ import poster from "../assets/poster.webp";
 import screenwriterPhoto from "../assets/screenwriter.webp";
 import leadactressPhoto from "../assets/leadactress.webp";
 import story1Photo from "../assets/story1.webp";
+import ryanPhoto from "../assets/a9ff0153-b4b1-4d4d-be0e-326fd19c80ac.webp";
 import michaelPhoto from "../assets/michael.webp";
 import instagramLogo from "../assets/insta1.webp";
 
@@ -194,7 +195,7 @@ const CastCrew = () => {
       {
         name: "Ryan Buck Thomas",
         role: "Supporting Actor",
-        photo: story1Photo,
+        photo: ryanPhoto,
         bio: `St. Augustine, Florida, USA\nRyan Buck Thomas is a native Amerian actor that has played the role of a shaman in the Echo pilot Episode. He has starred in the movie \"The Adobe\" available in Amazon Prime..`,
         links: [],
         social: [
