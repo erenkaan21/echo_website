@@ -27,12 +27,19 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
   // Extract location (first line before \n) and rest as bio
   let location = "";
   let restBio = "";
+  let previewBio = "";
+  // Extract location (first line before \n) and rest as bio
   if (bio && bio.includes("\n")) {
     [location, ...restBio] = bio.split("\n");
     restBio = restBio.join("\n");
   } else {
     location = "";
     restBio = bio || "";
+  }
+  // Extract first sentence for preview
+  if (restBio) {
+    const match = restBio.match(/.*?[.!?](\s|$)/);
+    previewBio = match ? match[0].trim() : restBio.trim();
   }
   return (
     <motion.div
@@ -51,20 +58,20 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
         filter: "brightness(1.08)",
         zIndex: 20
       }}
-      className={`relative w-[110px] h-[360px] md:w-[120px] md:h-[420px] flex flex-col items-center cursor-pointer overflow-hidden rounded-xl shadow-xl bg-gradient-to-br from-[#181b2e] to-[#2a1c3b] group z-10 transition-all duration-300`}
+      className={`relative w-[110px] h-[410px] md:w-[120px] md:h-[480px] flex flex-col items-center cursor-pointer overflow-hidden rounded-xl shadow-xl bg-gradient-to-br from-[#181b2e] to-[#2a1c3b] group z-10 transition-all duration-300`}
       onClick={onClick}
     >
-      {/* Location and Name at the top */}
-      <div className="absolute top-0 left-0 w-full flex flex-col items-center z-20 pointer-events-none mt-2">
-        {location && <span className="text-xs md:text-sm font-semibold text-dreamy drop-shadow bg-[#181b2e99] px-2 py-1 rounded-t-xl mb-1">{location}</span>}
-        <span className="text-base md:text-lg font-bold text-white drop-shadow bg-[#181b2e99] px-2 py-0.5 rounded-xl mb-1">{name}</span>
-        <span className="uppercase tracking-wider text-[10px] md:text-[11px] text-white bg-[#181b2e99] px-1.5 py-0.5 rounded mb-1">{role}</span>
+      {/* Info block: name, role, location above bio preview */}
+      <div className="w-full flex flex-col items-center z-20 mb-0 mt-1 gap-[2px]">
+        {location && <span className="text-[9px] md:text-[11px] font-semibold text-dreamy drop-shadow bg-[#181b2e99] px-2 py-0.5 rounded-t-xl leading-tight">{location}</span>}
+        <span className="text-[12px] md:text-[15px] font-bold text-white drop-shadow bg-[#181b2e99] px-2 py-0.5 rounded-xl leading-tight">{name}</span>
+        <span className="uppercase tracking-wider text-[8px] md:text-[9px] text-white bg-[#181b2e99] px-1.5 py-0.5 rounded leading-tight">{role}</span>
       </div>
       <motion.img
         src={photo}
         alt={name}
         className="object-cover w-full h-full transition-all duration-500 border-2 border-ethereal/30 rounded-xl"
-        style={{ zIndex: 1 }}
+        style={{ zIndex: 1, objectPosition: name === "Zeynep Hande Yazici" ? '50% 70%' : 'top' }}
         whileHover={{ scale: 1.08, filter: "brightness(1.13)" }}
         transition={{ type: "spring", stiffness: 300, damping: 24 }}
       />
@@ -74,6 +81,12 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
         whileHover={{ background: "linear-gradient(120deg, #a68cff33 0%, #181b2e88 100%)" }}
         transition={{ duration: 0.3 }}
       />
+      {/* Bio preview (first sentence) */}
+      {!expanded && previewBio && (
+        <div className="absolute bottom-2 left-2 right-2 z-20">
+          <p className="text-white text-[9px] md:text-[10px] text-center bg-[#181b2ecc] rounded-lg px-2 py-1 shadow whitespace-pre-line line-clamp-2">{previewBio}</p>
+        </div>
+      )}
       {/* Expanded overlay with text */}
       {expanded && (
         <motion.div
@@ -84,7 +97,7 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
           transition={{ type: "spring", stiffness: 220, damping: 28 }}
         >
           <div className="w-full flex flex-col items-center justify-center">
-            <p className="text-white text-[9px] md:text-[11px] mb-2 text-center whitespace-pre-line min-h-[32px]">{restBio}</p>
+            <p className="text-white text-[8px] md:text-[9px] mb-2 text-center whitespace-pre-line min-h-[28px]">{restBio}</p>
             {Array.isArray(social) && social[0] && social[0].url && (
               <a
                 href={social[0].url}
@@ -113,7 +126,7 @@ const AccordionPanel = ({ bio, links, social, onClose }) => (
     style={{ minWidth: 0 }}
   >
     <button onClick={onClose} className="absolute top-2 right-2 text-xs px-2 py-1 bg-dreamy/30 text-ethereal rounded hover:bg-dreamy/60">Close</button>
-    <p className="text-accent text-xs mb-2 text-center whitespace-pre-line min-h-[28px]">{bio}</p>
+    <p className="text-accent text-[9px] mb-2 text-center whitespace-pre-line min-h-[24px]">{bio}</p>
     <div className="flex flex-wrap gap-1 mb-1 justify-center">
       {links.map((l, idx) => (
         <a key={idx} href={l.url} target="_blank" rel="noopener noreferrer" className="text-xs px-1.5 py-0.5 bg-ethereal/10 text-ethereal rounded hover:bg-ethereal/20 transition">{l.label}</a>
@@ -166,7 +179,7 @@ const CastCrew = () => {
         name: "Tuğba Yazıcı",
         role: "Producer",
         photo: still1,
-        bio: `Florida, FL, USA\nTuğba Yazıcı was born in Istanbul. After studying at the Faculty of Fine Arts Painting Department, she received \"Fashion Design\" education at the Istanbul Fashion Academy between 2012-2014. Besides the paintings she produced and the exhibitions she organized, she created her brand in 2014. She adapted her paintings from canvas and adapted them to her designs and created a brand as \"Tugba Yazıcı\".\nThrough the \"Portable Art\" concept, the artist combines her paintings with fashion; today, it is carried around the world in colorful, bold, and different designs. Their designs are worn in many countries of the world. She also continues her painting studies and participates in international exhibitions such as Spectrum Miami Art Fair. The artist lives in Florida.`,
+        bio: `Florida, FL, USA\nTuğba Yazıcı is a Turkish-American producer, artist, fashion designer, and writer based in the United States, known for her significant contributions to independent cinema as a multifaceted creative. Beginning her artistic journey at a young age, Yazıcı has developed a distinctive form of expression in both visual and written arts, earning widespread attention for her unique style.\n\nIn her film production career, she is particularly recognized for projects that focus on women’s stories, gender issues, and identity. Her socially conscious and artistically rich productions reflect a deep sensitivity and original perspective. She also stands out in the worlds of fashion and art with her innovative work, aiming to build a strong connection with audiences by exploring themes of cultural diversity and social transformation.\n\nAs the founder and journalist of ArtTmodernmiami magazine, Tuğba Yazıcı is also known for her in-depth analyses of life and current events. Her work continues to inspire young artists and has been honored with numerous national and international awards and recognitions.`,
         links: [],
         social: [
           { icon: "fab fa-instagram", url: "https://www.instagram.com/tugbayaziciofficial/" }
@@ -174,14 +187,6 @@ const CastCrew = () => {
       },
     ],
     [
-      {
-        name: "Michael Gabriel",
-        role: "Lead Actor",
-        photo: michaelPhoto,
-        bio: `Miami, FL, USA\nMichael Gabriel, is an actor starring in Abduction Chronicles on Amazon Prime, The April 16th Collateral Interest cartel series which will be released on Prime.`,
-        links: [],
-        social: []
-      },
       {
         name: "Zeynep Hande Yazici",
         role: "Lead Actress",
@@ -191,6 +196,14 @@ const CastCrew = () => {
         social: [
           { icon: "fab fa-instagram", url: "https://www.instagram.com/p/CZMr16gD_l8/" }
         ]
+      },
+      {
+        name: "Michael Gabriel",
+        role: "Lead Actor",
+        photo: michaelPhoto,
+        bio: `Miami, FL, USA\nMichael Gabriel, is an actor starring in Abduction Chronicles on Amazon Prime, The April 16th Collateral Interest cartel series which will be released on Prime.`,
+        links: [],
+        social: []
       },
       {
         name: "Ryan Buck Thomas",

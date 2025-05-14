@@ -71,8 +71,19 @@ const Story = () => {
           <motion.img
             src={storylineSlides[current].image.replace(/(jpg|jpeg|png)$/, 'webp')}
             alt={storylineSlides[current].title}
-            className="w-full h-full object-cover object-center absolute inset-0"
-            style={{ zIndex: 1, filter: 'brightness(0.7) saturate(1.08)' }}
+            className="w-full h-full object-cover absolute inset-0"
+            style={{
+              zIndex: 1,
+              filter: 'brightness(0.7) saturate(1.08)',
+              objectPosition: (() => {
+                if (typeof window !== 'undefined' && window.innerWidth < 768) {
+                  if (current === 0 || current === 5) return '40% 50%'; // left
+                  if (current === 2) return '70% 50%'; // further right
+                  if (current === storylineSlides.length - 1) return '60% 50%'; // right
+                }
+                return 'center';
+              })()
+            }}
             initial={{ scale: 1 }}
             animate={{ scale: 1.07 }}
             transition={{ duration: AUTO_ADVANCE_SEC, ease: 'easeInOut' }}

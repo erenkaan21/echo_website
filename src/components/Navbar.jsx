@@ -21,7 +21,9 @@ const Navbar = () => (
     style={{ boxShadow: '0 6px 32px 0 #a68cff22' }}
   >
     <div className="max-w-full mx-auto px-2 md:px-4 py-1 flex items-center justify-center gap-3 md:gap-6 lg:gap-8">
-      <DynamicEchoTitle size="navbar" />
+      <div className="min-w-[72px] flex items-center overflow-visible">
+        <DynamicEchoTitle size="navbar" />
+      </div>
       <div className="flex gap-3 md:gap-5 lg:gap-7 rounded-xl bg-transparent px-2 md:px-4 py-2 max-w-7xl overflow-x-auto items-center scrollbar-hide whitespace-nowrap">
         {navItems.map(item => (
           <NavLink
@@ -154,7 +156,7 @@ const DynamicEchoTitle = ({ size = "home" }) => {
                 src={pearl}
                 alt="pearl"
                 className="relative z-10 inline-block -ml-1"
-                style={{ width: size === "navbar" ? "0.9em" : "0.8em", height: size === "navbar" ? "0.9em" : "0.8em", objectFit: "contain", verticalAlign: "middle", filter: hovered === idx ? "drop-shadow(0 0 8px #a68cff)" : "none" }}
+                style={{ width: size === "navbar" ? "0.8em" : "0.8em", height: size === "navbar" ? "0.8em" : "0.8em", objectFit: "contain", verticalAlign: "middle", filter: hovered === idx ? "drop-shadow(0 0 8px #a68cff)" : "none" }}
                 draggable={false}
               />
             )}
