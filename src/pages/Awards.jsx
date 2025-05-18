@@ -103,7 +103,7 @@ const Awards = () => (
       {/* Sponsors Section */}
       <div className="w-full mt-4 flex flex-col items-center">
         <h3 className="text-2xl md:text-3xl font-bold text-ethereal text-center mb-0 tracking-wide drop-shadow-lg">Partnerships</h3>
-        <div className="flex flex-row justify-center items-end gap-12 md:gap-20 w-full max-w-4xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-end gap-y-8 md:gap-y-0 md:gap-20 w-full max-w-4xl mx-auto">
   <div className="flex flex-col items-center min-w-[180px] mt-8">
     <a href="https://redwoodartgroup.com/red-dot-miami/" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100">
       <img src={reddot} alt="Red Dot Sponsor" className="h-80 md:h-100 object-contain" />
