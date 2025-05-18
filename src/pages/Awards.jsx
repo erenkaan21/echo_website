@@ -16,6 +16,9 @@ import award9 from "../assets/award9.webp";
 import award10 from "../assets/award10.png";
 import award11 from "../assets/award11.png";
 import award12 from "../assets/award12.png";
+import reddot from "../assets/reddot.png";
+import actcontemporary from "../assets/actcontemporary.png";
+import artmodern from "../assets/artmodern.png";
 
 const awardImages = [award1, award2, award3, award4, award5, award6, award7, award8, award9, award10, award11, award12];
 
@@ -97,6 +100,29 @@ const Awards = () => (
         </motion.div>
       {/* Press & Interviews Section (below awards) */}
       <PressLinksSection />
+      {/* Sponsors Section */}
+      <div className="w-full mt-4 flex flex-col items-center">
+        <h3 className="text-2xl md:text-3xl font-bold text-ethereal text-center mb-0 tracking-wide drop-shadow-lg">Partnerships</h3>
+        <div className="flex flex-row justify-center items-end gap-12 md:gap-20 w-full max-w-4xl mx-auto">
+  <div className="flex flex-col items-center min-w-[180px] mt-8">
+    <a href="https://redwoodartgroup.com/red-dot-miami/" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100">
+      <img src={reddot} alt="Red Dot Sponsor" className="h-80 md:h-100 object-contain" />
+    </a>
+  </div>
+  <div className="flex flex-col items-center min-w-[180px] -mt-20">
+    <a href="https://arttmodernmiami.com/" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100">
+      <img src={artmodern} alt="Art Modern Sponsor" className="h-60 md:h-80 object-contain" />
+    </a>
+    
+  </div>
+  <div className="flex flex-col items-center min-w-[180px] -mt-12">
+    <a href="https://actcontemporary.com" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100">
+      <img src={actcontemporary} alt="Act Contemporary Sponsor" className="h-64 md:h-80 object-contain" />
+    </a>
+    
+  </div>
+</div>
+      </div>
     </motion.div>
   </section>
 );
