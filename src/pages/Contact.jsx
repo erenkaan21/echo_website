@@ -110,8 +110,34 @@ const Contact = () => {
           </motion.div>
         </div>
       </motion.div>
+      <MekaFooter />
     </section>
   );
 };
 
+// --- MEKA DIGITALS FOOTER ---
+import mekalogo from "../assets/mekalogo.png";
+
+const instagramIcon = (
+  <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="inline-block align-middle text-dreamy group-hover:text-ethereal transition">
+    <rect width="18" height="18" x="3" y="3" rx="5" strokeWidth="2"/>
+    <circle cx="12" cy="12" r="4" strokeWidth="2"/>
+    <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+  </svg>
+);
+
+function MekaFooter() {
+  return (
+    <div className="w-full flex flex-col items-center justify-center mt-14 mb-2">
+      <div className="flex items-center gap-2 md:gap-3 px-4 py-2">
+        <img src={mekalogo} alt="Meka Digitals Logo" width={144} height={144} className="rounded-full shadow-sm" />
+        <span className="text-base md:text-lg text-ethereal/80 font-semibold ml-2 flex items-center gap-2">Built by Meka Digitals
+  <a href="https://www.instagram.com/mekadigitals" target="_blank" rel="noopener noreferrer" className="ml-1 hover:text-dreamy hover:scale-110 transition-transform" style={{display:'inline-flex',verticalAlign:'middle'}}>{instagramIcon}</a>
+</span>
+      </div>
+    </div>
+  );
+}
+
 export default Contact;
+

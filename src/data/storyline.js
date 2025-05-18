@@ -29,7 +29,7 @@ export const storylineSlides = [
     image: story4
   },
   {
-    title: "Deniz Meets Luis",
+    title: "Deniz Meets Luis<br />in Miami",
     text: `She meets Luis at an art show in Miami, where she faces threats from treasure hunters and uncovers the medallion's abilities.`,
     image: story5
   },

@@ -109,9 +109,8 @@ const Story = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.7, ease: "easeInOut" }}
-                >
-                  {storylineSlides[current].title}
-                </motion.h2>
+                  dangerouslySetInnerHTML={{ __html: storylineSlides[current].title }}
+                />
                 <motion.p
                   className="text-xs md:text-sm font-serif text-white/90 drop-shadow max-w-2xl text-center tracking-wide"
                   style={{ fontFamily: `'Georgia', 'Times New Roman', serif` }}

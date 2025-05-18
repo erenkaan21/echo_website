@@ -66,6 +66,7 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
         {location && <span className="text-[9px] md:text-[11px] font-semibold text-dreamy drop-shadow bg-[#181b2e99] px-2 py-0.5 rounded-t-xl leading-tight">{location}</span>}
         <span className="text-[12px] md:text-[15px] font-bold text-white drop-shadow bg-[#181b2e99] px-2 py-0.5 rounded-xl leading-tight">{name}</span>
         <span className="uppercase tracking-wider text-[8px] md:text-[9px] text-white bg-[#181b2e99] px-1.5 py-0.5 rounded leading-tight">{role}</span>
+        
       </div>
       <motion.img
         src={photo}
@@ -108,6 +109,13 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
               >
                 <img src={instagramLogo} alt="Instagram" width={56} height={56} className="block opacity-70 hover:opacity-100 transition-opacity" />
               </a>
+            )}
+            {/* Email for expanded card */}
+            {name === "Tuğba Yazıcı" && (
+              <a href="mailto:arttmodernmiami@gmail.com" className="block text-[11px] md:text-[12px] text-dreamy underline hover:text-ethereal transition mt-2 text-center">arttmodernmiami@gmail.com</a>
+            )}
+            {name === "Livia Oya Proto" && (
+              <a href="mailto:protolivia@gmail.com" className="block text-[11px] md:text-[12px] text-dreamy underline hover:text-ethereal transition mt-2 text-center">protolivia@gmail.com</a>
             )}
           </div>
         </motion.div>

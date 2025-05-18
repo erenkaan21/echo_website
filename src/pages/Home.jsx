@@ -145,7 +145,7 @@ const Home = () => (
         </p>
         {/* Mobile: Poster below logline, above trailer */}
         <div className="block md:hidden w-full flex justify-center my-4">
-          <div className="w-72 h-[420px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
+          <div className="w-80 h-[520px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
             <motion.img
               src={poster}
               alt="Film Poster"
