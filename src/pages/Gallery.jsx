@@ -47,11 +47,58 @@ import still2_thumb from "../assets/thumbs/still2.webp";
 import bts1_thumb from "../assets/thumbs/bts1.webp";
 import poster_thumb from "../assets/thumbs/poster.webp";
 import img29 from "../assets/img29.webp";
+import foto2 from "../assets/foto (2).webp";
+import foto2_thumb from "../assets/thumbs/foto (2).webp";
+import foto3 from "../assets/foto (3).webp";
+import foto3_thumb from "../assets/thumbs/foto (3).webp";
+import foto5 from "../assets/foto (5).webp";
+import foto5_thumb from "../assets/thumbs/foto (5).webp";
+import foto8 from "../assets/foto (8).webp";
+import foto8_thumb from "../assets/thumbs/foto (8).webp";
+import foto9 from "../assets/foto (9).webp";
+import foto9_thumb from "../assets/thumbs/foto (9).webp";
+import foto11 from "../assets/foto (11).webp";
+import foto11_thumb from "../assets/thumbs/foto (11).webp";
+import foto12 from "../assets/foto (12).webp";
+import foto12_thumb from "../assets/thumbs/foto (12).webp";
+import foto22 from "../assets/foto (22).webp";
+import foto22_thumb from "../assets/thumbs/foto (22).webp";
+import foto23 from "../assets/foto (23).webp";
+import foto23_thumb from "../assets/thumbs/foto (23).webp";
+import foto24 from "../assets/foto (24).webp";
+import foto24_thumb from "../assets/thumbs/foto (24).webp";
+import foto25 from "../assets/foto (25).webp";
+import foto25_thumb from "../assets/thumbs/foto (25).webp";
+import foto26 from "../assets/foto (26).webp";
+import foto26_thumb from "../assets/thumbs/foto (26).webp";
+import foto27 from "../assets/foto (27).webp";
+import foto27_thumb from "../assets/thumbs/foto (27).webp";
+import foto28 from "../assets/foto (28).webp";
+import foto28_thumb from "../assets/thumbs/foto (28).webp";
+import foto29 from "../assets/foto (29).webp";
+import foto29_thumb from "../assets/thumbs/foto (29).webp";
 
 const galleryImages = [
   { full: poster, thumb: poster_thumb },
   { full: img29, thumb: img29 },
   { full: img1, thumb: img1_thumb },
+  // ... (other existing images)
+  // Add all 'foto' images at the end in order
+  { full: foto2, thumb: foto2_thumb },
+  { full: foto3, thumb: foto3_thumb },
+  { full: foto5, thumb: foto5_thumb },
+  { full: foto8, thumb: foto8_thumb },
+  { full: foto9, thumb: foto9_thumb },
+  { full: foto11, thumb: foto11_thumb },
+  { full: foto12, thumb: foto12_thumb },
+  { full: foto22, thumb: foto22_thumb },
+  { full: foto23, thumb: foto23_thumb },
+  { full: foto24, thumb: foto24_thumb },
+  { full: foto25, thumb: foto25_thumb },
+  { full: foto26, thumb: foto26_thumb },
+  { full: foto27, thumb: foto27_thumb },
+  { full: foto28, thumb: foto28_thumb },
+  { full: foto29, thumb: foto29_thumb },
   { full: img2, thumb: img2_thumb },
   { full: img3, thumb: img3_thumb },
   { full: img4, thumb: img4_thumb },

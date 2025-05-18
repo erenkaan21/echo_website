@@ -21,7 +21,7 @@ const Navbar = () => (
     style={{ boxShadow: '0 6px 32px 0 #a68cff22' }}
   >
     <div className="max-w-full mx-auto px-2 md:px-4 py-1 flex items-center justify-center gap-3 md:gap-6 lg:gap-8">
-      <div className="min-w-[72px] flex items-center overflow-visible">
+      <div className="min-w-[72px] flex items-center overflow-visible ml-3 md:ml-0">
         <DynamicEchoTitle size="navbar" />
       </div>
       <div className="flex gap-3 md:gap-5 lg:gap-7 rounded-xl bg-transparent px-2 md:px-4 py-2 max-w-7xl overflow-x-auto items-center scrollbar-hide whitespace-nowrap">

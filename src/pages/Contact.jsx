@@ -53,24 +53,34 @@ const Contact = () => {
             <p className="text-sm md:text-base text-ethereal/80 text-center mb-4 max-w-md">
               For press, collaboration, or questions, reach out via e-mail or Instagram!
             </p>
-            <div className="flex flex-col md:flex-row gap-4 w-full justify-center items-center mt-2">
+            <div className="flex flex-col md:flex-row md:flex-wrap gap-2 md:gap-3 w-full justify-center items-center mt-2">
               {/* Email Card */}
               <motion.a
-                href="mailto:info@echopilot.com"
-                className="flex items-center gap-2 px-6 py-3 bg-white/90 hover:bg-ethereal/90 text-navy font-bold text-base md:text-lg rounded-xl shadow-xl border-2 border-ethereal/30 hover:border-dreamy/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-dreamy cursor-pointer select-none whitespace-nowrap min-w-[180px] md:min-w-[220px]"
-                title="Send e-mail"
+                href="mailto:echoshortmovie2023@gmail.com"
+                className="flex items-center gap-1 px-3 py-2 bg-white/90 hover:bg-ethereal/90 text-navy font-bold text-xs md:text-sm lg:text-base rounded-xl shadow-xl border-2 border-ethereal/30 hover:border-dreamy/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-dreamy cursor-pointer select-none whitespace-nowrap min-w-[140px]"
+                title="Send e-mail to Echo Short Movie"
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.97 }}
               >
                 <i className="fas fa-envelope text-2xl text-dreamy" />
-                info@echopilot.com
+                echoshortmovie2023@gmail.com
+              </motion.a>
+              <motion.a
+                href="mailto:protolivia@gmail.com"
+                className="flex items-center gap-1 px-3 py-2 bg-white/90 hover:bg-ethereal/90 text-navy font-bold text-xs md:text-sm lg:text-base rounded-xl shadow-xl border-2 border-ethereal/30 hover:border-dreamy/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-dreamy cursor-pointer select-none whitespace-nowrap min-w-[140px]"
+                title="Send e-mail to Livia Oya Proto"
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.97 }}
+              >
+                <i className="fas fa-envelope text-2xl text-dreamy" />
+                protolivia@gmail.com
               </motion.a>
               {/* Instagram Card */}
               <motion.a
                 href="https://www.instagram.com/echo_pilotepisode/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-dreamy/90 to-ethereal/90 hover:from-ethereal/90 hover:to-dreamy/90 text-white font-bold text-base md:text-lg rounded-xl shadow-xl border-2 border-ethereal/30 hover:border-dreamy/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-dreamy cursor-pointer select-none whitespace-nowrap min-w-[180px] md:min-w-[220px]"
+                className="flex items-center gap-1 px-3 py-2 bg-gradient-to-r from-dreamy/90 to-ethereal/90 hover:from-ethereal/90 hover:to-dreamy/90 text-white font-bold text-xs md:text-sm lg:text-base rounded-xl shadow-xl border-2 border-ethereal/30 hover:border-dreamy/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-dreamy cursor-pointer select-none whitespace-nowrap min-w-[140px]"
                 title="Go to Instagram"
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.97 }}

@@ -13,8 +13,11 @@ import award6 from "../assets/award6.webp";
 import award7 from "../assets/award7.webp";
 import award8 from "../assets/award8.webp";
 import award9 from "../assets/award9.webp";
+import award10 from "../assets/award10.png";
+import award11 from "../assets/award11.png";
+import award12 from "../assets/award12.png";
 
-const awardImages = [award1, award2, award3, award4, award5, award6, award7, award8, award9];
+const awardImages = [award1, award2, award3, award4, award5, award6, award7, award8, award9, award10, award11, award12];
 
 const Awards = () => (
   <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 mt-8 overflow-hidden">
@@ -50,7 +53,7 @@ const Awards = () => (
       <div className="mx-auto mb-4 w-20 h-0.5 rounded-full bg-gradient-to-r from-dreamy/0 via-dreamy/80 to-dreamy/0 blur-[1.5px] opacity-80" />
       {/* Awards Grid */}
       <motion.div
-          className="flex flex-col gap-6 mb-8 py-4 max-w-3xl mx-auto items-center"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-20 gap-y-6 mb-8 py-4 max-w-3xl mx-auto items-center -ml-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -61,72 +64,36 @@ const Awards = () => (
             }
           }}
         >
-          {/* First row: 4 images */}
-          <div className="grid grid-cols-2 gap-3 w-full md:flex md:flex-row md:gap-6 md:justify-center">
-            {awardImages.slice(0, 4).map((img, i) => (
+          {awardImages.map((img, i) => (
+            <motion.div
+              key={i}
+              className="relative flex items-center justify-center w-full aspect-square bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-ethereal/30 hover:border-dreamy/80 transition-all duration-300 group overflow-hidden flex-shrink-0 md:w-48 md:h-48 md:aspect-auto"
+              initial={{ opacity: 0, scale: 0.88, y: 40 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              whileHover={{ scale: 1.08, boxShadow: '0 0 32px 8px #a68cff55' }}
+              transition={{ type: 'spring', stiffness: 180, damping: 18 }}
+            >
+              <motion.img
+                src={img}
+                alt={`Award ${i+1}`}
+                className="w-4/5 h-4/5 object-contain drop-shadow-xl select-none pointer-events-none"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.12 }}
+                transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+                draggable="false"
+              />
+              {/* Glow effect */}
               <motion.div
-                key={i}
-                className="relative flex items-center justify-center w-full aspect-square bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-ethereal/30 hover:border-dreamy/80 transition-all duration-300 group overflow-hidden flex-shrink-0 md:w-48 md:h-48 md:aspect-auto"
-                initial={{ opacity: 0, scale: 0.88, y: 40 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                whileHover={{ scale: 1.08, boxShadow: "0 0 32px 8px #a68cff55" }}
-                transition={{ type: 'spring', stiffness: 180, damping: 18 }}
-              >
-                <motion.img
-                  src={img}
-                  alt={`Award ${i+1}`}
-                  className="w-4/5 h-4/5 object-contain drop-shadow-xl select-none pointer-events-none"
-                  initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.12 }}
-                  transition={{ type: 'spring', stiffness: 220, damping: 18 }}
-                  draggable="false"
-                />
-                {/* Glow effect */}
-                <motion.div
-                  className="absolute inset-0 rounded-2xl pointer-events-none"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 0.35 }}
-                  style={{
-                    background: 'radial-gradient(circle at 60% 30%, #a68cff66 0%, transparent 70%)',
-                    mixBlendMode: 'screen'
-                  }}
-                />
-              </motion.div>
-            ))}
-          </div>
-          {/* Second row: 5 images */}
-          <div className="grid grid-cols-2 gap-3 w-full md:flex md:flex-row md:gap-6 md:justify-center md:mt-4 !mt-0">
-            {awardImages.slice(4, 9).map((img, i) => (
-              <motion.div
-                key={i+4}
-                className="relative flex items-center justify-center w-full aspect-square bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-ethereal/30 hover:border-dreamy/80 transition-all duration-300 group overflow-hidden flex-shrink-0 md:w-48 md:h-48 md:aspect-auto"
-                initial={{ opacity: 0, scale: 0.88, y: 40 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                whileHover={{ scale: 1.08, boxShadow: "0 0 32px 8px #a68cff55" }}
-                transition={{ type: 'spring', stiffness: 180, damping: 18 }}
-              >
-                <motion.img
-                  src={img}
-                  alt={`Award ${i+5}`}
-                  className="w-4/5 h-4/5 object-contain drop-shadow-xl select-none pointer-events-none"
-                  initial={{ scale: 1 }}
-                  whileHover={{ scale: 1.12 }}
-                  transition={{ type: 'spring', stiffness: 220, damping: 18 }}
-                  draggable="false"
-                />
-                {/* Glow effect */}
-                <motion.div
-                  className="absolute inset-0 rounded-2xl pointer-events-none"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 0.35 }}
-                  style={{
-                    background: 'radial-gradient(circle at 60% 30%, #a68cff66 0%, transparent 70%)',
-                    mixBlendMode: 'screen'
-                  }}
-                />
-              </motion.div>
-            ))}
-          </div>
+                className="absolute inset-0 rounded-2xl pointer-events-none"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 0.35 }}
+                style={{
+                  background: 'radial-gradient(circle at 60% 30%, #a68cff66 0%, transparent 70%)',
+                  mixBlendMode: 'screen'
+                }}
+              />
+            </motion.div>
+          ))}
         </motion.div>
       {/* Press & Interviews Section (below awards) */}
       <PressLinksSection />

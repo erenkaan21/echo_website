@@ -145,7 +145,7 @@ const Home = () => (
         </p>
         {/* Mobile: Poster below logline, above trailer */}
         <div className="block md:hidden w-full flex justify-center my-4">
-          <div className="w-64 h-[370px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
+          <div className="w-72 h-[420px] rounded-2xl shadow-2xl border-4 border-ethereal/20 bg-[#23233a] overflow-hidden flex items-center justify-center">
             <motion.img
               src={poster}
               alt="Film Poster"
@@ -163,7 +163,7 @@ const Home = () => (
           transition={{ delay: 0.5, duration: 1 }}
           className="mt-4 md:mt-6 w-full flex justify-center md:justify-start"
         >
-          <div className="w-[70vw] md:w-[420px] lg:w-[540px] aspect-video rounded-xl overflow-hidden border-4 border-ethereal/30">
+          <div className="w-[56vw] md:w-[420px] lg:w-[540px] aspect-video rounded-xl overflow-hidden border-4 border-ethereal/30">
             <iframe
               src={movie.trailerUrl}
               title="Echo Trailer"
