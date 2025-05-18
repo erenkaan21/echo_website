@@ -53,7 +53,7 @@ const Awards = () => (
       <div className="mx-auto mb-4 w-20 h-0.5 rounded-full bg-gradient-to-r from-dreamy/0 via-dreamy/80 to-dreamy/0 blur-[1.5px] opacity-80" />
       {/* Awards Grid */}
       <motion.div
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-20 gap-y-6 mb-8 py-4 max-w-3xl mx-auto items-center -ml-12"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-2 gap-y-3 sm:gap-x-10 md:gap-x-20 sm:gap-y-6 mb-8 py-4 max-w-3xl mx-auto items-center ml-1 sm:ml-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
