@@ -31,7 +31,7 @@ const PressLinksSection = () => (
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
-      className="text-2xl md:text-3xl font-bold text-ethereal text-center mb-10 tracking-wide drop-shadow-lg"
+      className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide drop-shadow-lg bg-gradient-to-r from-ethereal via-dreamy to-ethereal bg-clip-text text-transparent"
     >
       Interview & Press
     </motion.h2>

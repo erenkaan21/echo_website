@@ -65,16 +65,7 @@ const Contact = () => {
                 <i className="fas fa-envelope text-2xl text-dreamy" />
                 echoshortmovie2023@gmail.com
               </motion.a>
-              <motion.a
-                href="mailto:protolivia@gmail.com"
-                className="flex items-center gap-1 px-3 py-2 bg-white/90 hover:bg-ethereal/90 text-navy font-bold text-xs md:text-sm lg:text-base rounded-xl shadow-xl border-2 border-ethereal/30 hover:border-dreamy/80 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-dreamy cursor-pointer select-none whitespace-nowrap min-w-[140px]"
-                title="Send e-mail to Livia Oya Proto"
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.97 }}
-              >
-                <i className="fas fa-envelope text-2xl text-dreamy" />
-                protolivia@gmail.com
-              </motion.a>
+
               {/* Instagram Card */}
               <motion.a
                 href="https://www.instagram.com/echo_pilotepisode/"

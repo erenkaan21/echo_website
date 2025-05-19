@@ -100,28 +100,52 @@ const Awards = () => (
         </motion.div>
       {/* Press & Interviews Section (below awards) */}
       <PressLinksSection />
-      {/* Sponsors Section */}
-      <div className="w-full mt-4 flex flex-col items-center">
-        <h3 className="text-2xl md:text-3xl font-bold text-ethereal text-center mb-0 tracking-wide drop-shadow-lg">Partnerships</h3>
-        <div className="flex flex-col md:flex-row justify-center items-end gap-y-8 md:gap-y-0 md:gap-20 w-full max-w-4xl mx-auto">
-  <div className="flex flex-col items-center min-w-[180px] mt-8">
-    <a href="https://redwoodartgroup.com/red-dot-miami/" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100">
-      <img src={reddot} alt="Red Dot Sponsor" className="h-80 md:h-100 object-contain" />
-    </a>
-  </div>
-  <div className="flex flex-col items-center min-w-[180px] -mt-20">
-    <a href="https://arttmodernmiami.com/" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100">
-      <img src={artmodern} alt="Art Modern Sponsor" className="h-60 md:h-80 object-contain" />
-    </a>
-    
-  </div>
-  <div className="flex flex-col items-center min-w-[180px] -mt-12">
-    <a href="https://actcontemporary.com" target="_blank" rel="noopener noreferrer" className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100">
-      <img src={actcontemporary} alt="Act Contemporary Sponsor" className="h-64 md:h-80 object-contain" />
-    </a>
-    
-  </div>
-</div>
+      {/* Partnerships Section */}
+      <div className="w-full flex flex-col items-center mt-16">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-2xl md:text-3xl font-bold text-ethereal text-center mb-10 tracking-wide drop-shadow-lg bg-gradient-to-r from-ethereal via-dreamy to-ethereal bg-clip-text text-transparent"
+        >
+          Partnerships
+        </motion.h2>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-y-8 md:gap-y-0 md:gap-16 w-full max-w-4xl mx-auto">
+          <motion.a
+            href="https://redwoodartgroup.com/red-dot-miami/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.07 }}
+            whileTap={{ scale: 0.97 }}
+            className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100"
+            style={{ display: 'flex' }}
+          >
+            <img src={reddot} alt="Red Dot Sponsor" className="h-40 md:h-32 mt-8 object-contain" />
+          </motion.a>
+          <motion.a
+            href="https://arttmodernmiami.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.07 }}
+            whileTap={{ scale: 0.97 }}
+            className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100"
+            style={{ display: 'flex' }}
+          >
+            <img src={artmodern} alt="Art Modern Sponsor" className="h-56 md:h-56 object-contain" />
+          </motion.a>
+          <motion.a
+            href="https://actcontemporary.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.07 }}
+            whileTap={{ scale: 0.97 }}
+            className="transition-transform duration-300 ease-out hover:scale-105 active:scale-100"
+            style={{ display: 'flex' }}
+          >
+            <img src={actcontemporary} alt="Act Contemporary Sponsor" className="h-40 md:h-32 object-contain" />
+          </motion.a>
+        </div>
       </div>
     </motion.div>
   </section>
