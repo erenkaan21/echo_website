@@ -14,6 +14,7 @@ const pressLogos = [
   { img: NYIFA, alt: "New York International Film Awards", url: "https://newyorkinternationalfilmawards.com/tugba-yazici/" },
   { img: europeanshortawards, alt: "European Short Awards", url: "https://europeanshortawards.com/blog/interview-with-tugba-yazici-and-livia-oya-proto" },
   { img: artmodernmiami, alt: "ArtModernMiami", url: "https://arttmodernmiami.com/3715/echo-pilot-episode-a-mysterious-adventure-begins-from-rome-to-miami/" },
+  { img: prisma, alt: "Prisma Awards", url: "https://www.romeprismafilmawards.com/2025/03/21/an-interview-with-tugba-yazici-producer-of-echo/" },
 ];
 
 const interviewQuotes = [
@@ -22,6 +23,7 @@ const interviewQuotes = [
   { quote: "No limit restricts me in the field of art!", owner: "Tuğba Yazıcı" },
   { quote: "Not necessity, but chance is full of magic.", owner: "Livia Oya Proto" },
   { quote: "The medallion lives on with its whispers and energy.", owner: "ArttModernMiami" },
+  { quote: "Echo is a mirror held up to the soul of society.", owner: "Tuğba Yazıcı" },
 ];
 
 const PressLinksSection = () => (
@@ -36,7 +38,7 @@ const PressLinksSection = () => (
       Interview & Press
     </motion.h2>
     <div className="w-full mt-8">
-      <div className="grid grid-cols-2 grid-rows-3 gap-y-6 gap-x-4 md:flex md:flex-row md:justify-center md:items-start md:gap-8 lg:gap-16">
+      <div className="grid grid-cols-2 gap-y-6 gap-x-4 md:flex md:flex-row md:justify-center md:items-start md:gap-4 lg:gap-8">
         {pressLogos.map((logo, i) => (
           <motion.a
             key={i}
@@ -48,8 +50,7 @@ const PressLinksSection = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: i * 0.09 }}
             className={
-              `group flex flex-col items-center justify-start min-w-[120px] md:min-w-[140px] lg:min-w-[170px] ` +
-              (i === 4 ? 'col-span-2 justify-self-center' : '')
+              `group flex flex-col items-center justify-start min-w-[120px] md:min-w-[140px] lg:min-w-[170px]` 
             }
             style={{ position: 'relative', zIndex: 20 }}
           >

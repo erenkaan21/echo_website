@@ -117,6 +117,9 @@ const Card = ({ name, role, photo, bio, expanded, onClick, index = 0, social = [
             {name === "Livia Oya Proto" && (
               <a href="mailto:protolivia@gmail.com" className="block text-[11px] md:text-[12px] text-dreamy underline hover:text-ethereal transition mt-2 text-center">protolivia@gmail.com</a>
             )}
+            {name === "Melda Sherman" && (
+              <a href="mailto:meldasherman@yahoo.com" className="block text-[11px] md:text-[12px] text-dreamy underline hover:text-ethereal transition mt-2 text-center">meldasherman@yahoo.com</a>
+            )}
           </div>
         </motion.div>
       )}
@@ -177,7 +180,12 @@ const CastCrew = () => {
         name: "Melda Sherman",
         role: "Screenwriter",
         photo: screenwriterPhoto,
-        bio: `Boston, MA.\nMelda Sherman was born on June 15, 1975, in Izmir, Turkey. Her family inspired in her a love of learning that led her to creating artistic works, so she studied art at university. She took advantage of these opportunities to see behind the scenes so she wrote her first book, Everything Will Be Fine, in Turkish as Her şey çok güzel olacak, in 2016. By studying art, she built an understanding of the history of art, and she had poems published in Boston with other thirty poets. Her poems are “Pandora’s Box” and “Little Mermaid.” She also has interest in sculptures and creating her own style. Melda’s artwork has been shown in exhibitions in the United States and different countries. Throughout her life, Melda has always been fascinated by images and how the world is represented through the eyes of others, so she was drawn to photography also. Her book entitled “Migratory Birds” has been published by Hollywood 5M production company.`,
+        bio: `Boston, MA.
+She began her career in public relations, and the experiences and insights she gained during this time paved the way for her journey into writing. In 2016, driven by a desire to explore what happens behind the scenes, she penned her debut novel, Everything Will Be Fine, marking her entry into the literary world.
+
+Her deep interest in art history led her to pursue academic studies in the field, enriching her understanding and providing a nuanced perspective. This background shaped her second book, Migratory Birds, which explores themes of migration with a universal voice. The novel was well-received by international audiences and made available worldwide. It was later adapted into a Hollywood screenplay.
+
+Sherman is also one of the screenwriters behind Echo, a multi-award-winning American-Italian co-production. Currently based in Boston, she is working on her forthcoming novel as well as the next chapter of Echo. Through her storytelling, Melda Sherman masterfully explores themes of cultural transition, identity, and the depths of the human spirit.`,
         links: [],
         social: [
           { icon: "fab fa-instagram", url: "https://www.instagram.com/melssherman/" }
@@ -199,7 +207,8 @@ const CastCrew = () => {
         name: "Zeynep Hande Yazici",
         role: "Lead Actress",
         photo: leadactressPhoto,
-        bio: `Florida, FL, USA\nShe was born on September 20, 2001 in Istanbul. She studies psychology and is fluent in English and Turkish. She played in Istanbul Duru Theater in 2015-2016. Between 2016-2017 played in school theater at Amherst Regional High School, MA, USA. In 2018, she participated in the Berlin Art Festival (ISTA) workshop. In the 2021 she played the role of Farah in the Serbulent Apartment short film.`,
+        bio: `Florida, FL, USA
+A Turkish actress based in Florida, she discovered her passion for the performing arts at a young age. With a background in psychology, she brings emotional depth and authenticity to her roles. She gained international experience through workshops and art festivals in Berlin. In 2021, she made her film debut as “Farah” in the short film Serbulent Apartmanı. She then delivered a standout performance in the award-winning film Echo, portraying both the Italian character Denise and the Native American Elay. Her natural talent and psychological insight set her apart as a compelling on-screen presence.`,
         links: [],
         social: [
           { icon: "fab fa-instagram", url: "https://www.instagram.com/p/CZMr16gD_l8/" }

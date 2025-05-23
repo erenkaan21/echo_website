@@ -47,6 +47,10 @@ import still2_thumb from "../assets/thumbs/still2.webp";
 import bts1_thumb from "../assets/thumbs/bts1.webp";
 import poster_thumb from "../assets/thumbs/poster.webp";
 import img29 from "../assets/img29.webp";
+import photoo1 from "../assets/photoo (1).jpeg";
+import photoo2 from "../assets/photoo (2).jpeg";
+import photoo3 from "../assets/photoo (3).jpeg";
+import photoo4 from "../assets/photoo (4).jpeg";
 import foto2 from "../assets/foto (2).webp";
 import foto2_thumb from "../assets/thumbs/foto (2).webp";
 import foto3 from "../assets/foto (3).webp";
@@ -119,6 +123,10 @@ const galleryImages = [
   { full: img10, thumb: img10_thumb },
   { full: img11, thumb: img11_thumb },
   { full: img12, thumb: img12_thumb },
+  { full: photoo1, alt: "Gallery photo" },
+  { full: photoo2, alt: "Gallery photo" },
+  { full: photoo3, alt: "Gallery photo" },
+  { full: photoo4, alt: "Gallery photo" },
 ];
 
 import BlurredImage from "../components/BlurredImage";
