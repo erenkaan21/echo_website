@@ -16,13 +16,12 @@ import award9 from "../assets/award9.webp";
 import award10 from "../assets/award10.png";
 import award11 from "../assets/award11.png";
 import award12 from "../assets/award12.png";
-import buffalo from "../assets/buffalo.png";
 import reddot from "../assets/reddot.png";
 import lpproduction from "../assets/lpproduction.jpeg";
 import actcontemporary from "../assets/actcontemporary.png";
 import artmodern from "../assets/artmodern.png";
 
-const awardImages = [award1, award2, award3, award4, award5, award6, award7, award8, award9, award10, award11, award12, buffalo];
+const awardImages = [award1, award2, award3, award4, award5, award6, award7, award8, award9, award10, award11, award12];
 
 const Awards = () => (
   <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 mt-8 overflow-hidden">
