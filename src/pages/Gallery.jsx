@@ -9,8 +9,8 @@ import img1 from "../assets/1b89fa19-d220-49da-9511-b5ad8f02986a.jpeg.webp";
 import img1_thumb from "../assets/thumbs/1b89fa19-d220-49da-9511-b5ad8f02986a.jpeg.webp";
 import img2 from "../assets/IMG_2268.jpeg.webp";
 import img2_thumb from "../assets/thumbs/IMG_2268.jpeg.webp";
-import img3 from "../assets/IMG_2282.jpeg.webp";
-import img3_thumb from "../assets/thumbs/IMG_2282.jpeg.webp";
+
+import fotoSon from "../assets/fotoSon.jpeg";
 import img4 from "../assets/IMG_4886.jpeg.webp";
 import img4_thumb from "../assets/thumbs/IMG_4886.jpeg.webp";
 import img5 from "../assets/IMG_4887.jpeg.webp";
@@ -104,7 +104,7 @@ const galleryImages = [
   { full: foto28, thumb: foto28_thumb },
   { full: foto29, thumb: foto29_thumb },
   { full: img2, thumb: img2_thumb },
-  { full: img3, thumb: img3_thumb },
+  { full: fotoSon },
   { full: img4, thumb: img4_thumb },
   { full: img5, thumb: img5_thumb },
   { full: img6, thumb: img6_thumb },

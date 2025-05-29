@@ -218,7 +218,7 @@ A Turkish actress based in Florida, she discovered her passion for the performin
         name: "Michael Gabriel",
         role: "Lead Actor",
         photo: michaelPhoto,
-        bio: `Miami, FL, USA\nMichael Gabriel, is an actor starring in Abduction Chronicles on Amazon Prime, The April 16th Collateral Interest cartel series which will be released on Prime.`,
+        bio: `Michael Gabriel\nRaised in Miami, Florida, Michael Gabriel has shaped his acting career through comprehensive training and a deep interest in character complexity. He has appeared as Luis in Echo Series Pilot, D’Artagnan in Mourning Sacrifice, and Lima in the upcoming Cartel Series: Collateral Interest. He is especially passionate about performing in emotionally rich and meaningful stories.`,
         links: [],
         social: []
       },
